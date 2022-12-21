@@ -16,7 +16,7 @@
 #include "render_imgui.h"
 #include "assertgl.h"
 
-#define UNUSED(x) (void)(x)
+
 
 #define CAMERA_RESOLUTION_W     640
 #define CAMERA_RESOLUTION_H     480
@@ -149,6 +149,9 @@ render_segment_result (int ofstx, int ofsty, int draw_w, int draw_h,
     int segmap_w  = segment_ret->segmentmap_dims[0];
     int segmap_h  = segment_ret->segmentmap_dims[1];
     int segmap_c  = segment_ret->segmentmap_dims[2];
+
+    LOGI ("segmap:: %d %d %d", segmap_w, segmap_h, segmap_c);
+
     int x, y, c;
     static unsigned int *imgbuf = NULL;
     float hair_color[4] = {0};
